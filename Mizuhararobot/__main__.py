@@ -219,7 +219,7 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="☑️Add mizuhara to your group",
+                                text="➕️Add mizuhara to your group",
                                 url="t.me/{}?startgroup=true".format(
                                     context.bot.username
                                 ),
@@ -227,22 +227,22 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(
-                                text="🚑 Support Group",
+                                text="Support Group",
                                 url=f"https://t.me/{SUPPORT_CHAT}",
                             ),
                             InlineKeyboardButton(
-                                text="🔔 Updates Channel",
-                                url="https://t.me/chizuruupdates",
+                                text="❓️ help and commands",
+                                callback_data="help_back", 
                             ),
                         ],
                         [
                             InlineKeyboardButton(
-                                text="🧾 Getting started guide",
+                                text="📖 Getting started guide",
                                 url="https://t.me/chizuruupdates/18",
                             ), 
                             InlineKeyboardButton(
-                            text="? help",
-                            url="https://t.me/Chizurumanagementbot?start=help", 
+                            text="📍Updates", 
+                            url="https://t.me/chizuruupdates",
                             ), 
                         ],
                         [

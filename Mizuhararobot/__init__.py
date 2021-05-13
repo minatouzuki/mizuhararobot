@@ -5,6 +5,7 @@ import time
 import spamwatch
 from redis import StrictRedis
 import telegram.ext as tg
+from pyrogram import Client, errors
 
 from telethon import TelegramClient
 
@@ -174,6 +175,8 @@ try:
 except BaseException:
     raise Exception("Your redis server is not alive, please check again.")
 
+api_id = API_ID
+api_hash = API_HASH
 
 updater = tg.Updater(
     TOKEN,
@@ -182,6 +185,7 @@ updater = tg.Updater(
     use_context=True
 )
 telethn = TelegramClient("saitama", API_ID, API_HASH)
+pbot = Client("mizuPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
